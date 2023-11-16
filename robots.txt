@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mistychan.github.io/sitemap.xml
