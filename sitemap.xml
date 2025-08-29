@@ -27,13 +27,13 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mistychan.github.io/books/book1/</loc>
+    <loc>https://mistychan.github.io/books/</loc>
     <lastmod>2023-11-16T10:11:35+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://mistychan.github.io/books/</loc>
+    <loc>https://mistychan.github.io/books/book1/</loc>
     <lastmod>2023-11-16T10:11:35+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
