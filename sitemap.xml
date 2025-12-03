@@ -4,13 +4,19 @@
 
   <url>
     <loc>https://mistychan.github.io/blog/</loc>
-    <lastmod>2025-08-28T15:43:12+08:00</lastmod>
+    <lastmod>2025-12-02T15:25:25+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mistychan.github.io/blog/textarea/</loc>
+    <lastmod>2025-12-02T15:25:25+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://mistychan.github.io/</loc>
-    <lastmod>2025-08-28T15:43:12+08:00</lastmod>
+    <lastmod>2025-12-02T15:25:25+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
