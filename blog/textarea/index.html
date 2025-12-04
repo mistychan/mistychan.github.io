@@ -100,7 +100,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "413"
+    "wordCount": "427"
   }]
   </script>
 
@@ -486,7 +486,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-12-02 15:25:25 &#43;0800 CST">2 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>413 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+  <time datetime="2025-12-02 15:25:25 &#43;0800 CST">2 December 2025</time><span class="px-2 text-primary-500">&middot;</span><span>427 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
@@ -617,6 +617,7 @@
         <li><a href="#2-在组件中引入插件">2. 在组件中引入插件</a></li>
         <li><a href="#3-在组件中使用-vue-quill-editor">3. 在组件中使用 Vue-Quill-Editor</a></li>
         <li><a href="#4-配置富文本编辑器">4. 配置富文本编辑器</a></li>
+        <li><a href="#5-图片大小调整模块">5. 图片大小调整模块</a></li>
         <li><a href="#3-富文本的双向绑定">3. 富文本的双向绑定</a></li>
       </ul>
     </li>
@@ -639,6 +640,7 @@
         <li><a href="#2-在组件中引入插件">2. 在组件中引入插件</a></li>
         <li><a href="#3-在组件中使用-vue-quill-editor">3. 在组件中使用 Vue-Quill-Editor</a></li>
         <li><a href="#4-配置富文本编辑器">4. 配置富文本编辑器</a></li>
+        <li><a href="#5-图片大小调整模块">5. 图片大小调整模块</a></li>
         <li><a href="#3-富文本的双向绑定">3. 富文本的双向绑定</a></li>
       </ul>
     </li>
@@ -796,7 +798,40 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
-</span></span></code></pre></div><p><strong>vue-quill-editor支持图片以Base64格式上传，为了让图片在富文本框中的大小可调整，引入了quill-image-resize-module插件</strong></p>
+</span></span></code></pre></div>
+
+<h3 class="relative group">5. 图片大小调整模块 
+    <div id="5-%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F%E8%B0%83%E6%95%B4%E6%A8%A1%E5%9D%97" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#5-%E5%9B%BE%E7%89%87%E5%A4%A7%E5%B0%8F%E8%B0%83%E6%95%B4%E6%A8%A1%E5%9D%97" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>vue-quill-editor支持图片以Base64格式上传，为了让图片在富文本框中的大小可调整，引入了quill-image-resize-module插件</strong></p>
+<ul>
+<li>安装插件</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install quill-image-resize-module
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
+</span></span><span class="line"><span class="cl">yarn add quill-image-resize-module
+</span></span></code></pre></div><p><strong>如果你使用的是Vue-cli创建的项目，需要在<code>vue.config.js</code>中添加如下配置：</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 富文本图片自由缩放
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">configureWebpack</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">ProvidePlugin</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;window.Quill&#34;</span><span class="o">:</span> <span class="s2">&#34;quill/dist/quill.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s1">&#39;Quill&#39;</span><span class="o">:</span> <span class="s2">&#34;quill/dist/quill.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">}),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li>组件内修改插件的options配置</li>
+</ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">template</span><span class="o">&gt;</span>
 </span></span><span class="line"><span class="cl">  <span class="o">&lt;</span><span class="nx">quillEditor</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">v</span><span class="o">-</span><span class="nx">model</span><span class="o">=</span><span class="s2">&#34;content&#34;</span>
@@ -847,18 +882,6 @@
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/&gt;</span>
-</span></span></code></pre></div><p><strong>如果你使用的是Vue-cli创建的项目，需要在<code>vue.config.js</code>中添加如下配置：</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 富文本图片自由缩放
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">configureWebpack</span><span class="o">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">plugins</span><span class="o">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">      <span class="k">new</span> <span class="nx">webpack</span><span class="p">.</span><span class="nx">ProvidePlugin</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;window.Quill&#34;</span><span class="o">:</span> <span class="s2">&#34;quill/dist/quill.js&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s1">&#39;Quill&#39;</span><span class="o">:</span> <span class="s2">&#34;quill/dist/quill.js&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">      <span class="p">}),</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">  <span class="p">},</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div>
 
 <h3 class="relative group">3. 富文本的双向绑定 
@@ -909,7 +932,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">};</span>
 </span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="err">/script&gt;</span>
 </span></span></code></pre></div><ul>
-<li>由于双向绑定的缘故，用户输入的为一堆空格，<code>form.content</code>的值却为<code>&lt;p&gt;      &lt;/p&gt;</code>，rules校验是可以通过判空的，表单可以正常提交，但是这违背了产品的设计之初，用户输入一堆空格展示的富文本就没有意义了。</li>
+<li>由于双向绑定的缘故，如果用户输入的内容为一堆空格，<code>form.content</code>绑定拿到的值为<code>&lt;p&gt;          &lt;/p&gt;</code>，<code>ElementUI</code>中的<code>rules validator</code>是可以通过对值的判空校验，表单可以正常提交，但是这违背了产品的设计之初，用户输入一堆空格展示的富文本就没有意义了。</li>
 <li>如果不允许用户输入空格内容，导致提交的内容为空字符串，你可以在提交前对<code>form.content</code>进行操作，去掉首尾的空格。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// 提取富文本框中的p标签内容
@@ -988,6 +1011,28 @@
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/blog/hugocommit/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >HugoCommit</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2025-12-03 18:04:42 &#43;0800 CST">3 December 2025</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
