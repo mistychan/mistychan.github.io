@@ -15,7 +15,7 @@
       
       <guid>https://mistychan.github.io/blog/hugocommit/</guid>
       <description>记录提交hugo代码到github # 提交步骤 # 之前一直忘记怎么提交的，故记录一下提交hugo代码到github的步骤 使用 hugo new site 命令创建新的文章，书写完毕后 使用 hugo server 命令启动本地服务器，查看文章是否正常 使用 hugo 命令生成静态文件 进入public目录 已经设置好了github pages，将public目录下的文件提交到github pages的仓库中 cd public git add .</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mistychan.github.io/blog/hugocommit/featured.png" />
     </item>
     
     <item>
@@ -25,7 +25,7 @@
       
       <guid>https://mistychan.github.io/blog/textarea/</guid>
       <description>1.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mistychan.github.io/blog/textarea/featured.png" />
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       
       <guid>https://mistychan.github.io/blog/quickstart/</guid>
       <description>插件选择 # 必装扩展：统一代码风格、格式化、语法检查 # ESLint：javascript/typescript/json 语法检查</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mistychan.github.io/blog/quickstart/featured.png" />
     </item>
     
     <item>
@@ -45,7 +45,7 @@
       
       <guid>https://mistychan.github.io/blog/firstblog/</guid>
       <description>1 Git常用方法 # 1.</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mistychan.github.io/blog/firstblog/featured.png" />
     </item>
     
     <item>
