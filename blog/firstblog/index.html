@@ -64,7 +64,7 @@
   
   
   <meta property="og:title" content="开发笔记" />
-<meta property="og:description" content="1 Git常用方法 # 1." />
+<meta property="og:description" content="一、Git 常用操作整理 # 1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mistychan.github.io/blog/firstblog/" /><meta property="og:image" content="https://mistychan.github.io/blog/firstblog/featured.png"/><meta property="article:section" content="blog" />
 <meta property="article:published_time" content="2025-08-28T15:36:12+08:00" />
@@ -74,7 +74,7 @@
   <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://mistychan.github.io/blog/firstblog/featured.png"/>
 <meta name="twitter:title" content="开发笔记"/>
-<meta name="twitter:description" content="1 Git常用方法 # 1."/>
+<meta name="twitter:description" content="一、Git 常用操作整理 # 1."/>
 
   
   <script type="application/ld+json">
@@ -85,7 +85,7 @@
     "name": "开发笔记",
     "headline": "开发笔记",
     
-    "abstract": "1 Git常用方法 # 1.",
+    "abstract": "一、Git 常用操作整理 # 1.",
     "inLanguage": "en",
     "url" : "https:\/\/mistychan.github.io\/blog\/firstblog\/",
     "author" : {
@@ -101,7 +101,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "198"
+    "wordCount": "460"
   }]
   </script>
 
@@ -484,7 +484,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2025-08-28 15:36:12 &#43;0800 CST">28 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>198 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+  <time datetime="2025-08-28 15:36:12 &#43;0800 CST">28 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span>460 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
   
 
   
@@ -609,22 +609,20 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#一git-常用操作整理">一、Git 常用操作整理</a>
       <ul>
-        <li><a href="#1-git常用方法">1 Git常用方法</a>
+        <li><a href="#11-仓库推送的标准流程">1.1 仓库推送的标准流程</a>
           <ul>
-            <li><a href="#11-仓库推送方法">1.1 仓库推送方法</a></li>
-            <li><a href="#12-git-tag的用法">1.2 git tag的用法</a></li>
-            <li><a href="#13-git撤销相关">1.3 git撤销相关</a></li>
-            <li><a href="#14-git-merge-合并相关">1.4 git merge 合并相关</a></li>
-            <li><a href="#15-git合并代码">1.5 git合并代码</a></li>
+            <li><a href="#步骤说明">步骤说明</a></li>
           </ul>
         </li>
-        <li><a href="#1-git常用方法-1">1 Git常用方法</a>
-          <ul>
-            <li><a href="#21-npm-i-出现node-sass报错">2.1 npm i 出现node-sass报错</a></li>
-          </ul>
-        </li>
+        <li><a href="#12-git-tag-的使用场景与命令">1.2 Git Tag 的使用场景与命令</a></li>
+        <li><a href="#13-git-撤销相关操作">1.3 Git 撤销相关操作</a></li>
+        <li><a href="#14-git-merge-合并流程">1.4 Git Merge 合并流程</a></li>
+        <li><a href="#15-merge-与-rebase-的区别">1.5 Merge 与 Rebase 的区别</a></li>
+        <li><a href="#二开发环境与框架问题记录">二、开发环境与框架问题记录</a></li>
+        <li><a href="#21-npm-i-时-node-sass-安装失败">2.1 npm i 时 node-sass 安装失败</a></li>
+        <li><a href="#22-单页面-html-中-vue2-具名插槽失效问题">2.2 单页面 HTML 中 Vue2 具名插槽失效问题</a></li>
       </ul>
     </li>
   </ul>
@@ -640,22 +638,20 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#一git-常用操作整理">一、Git 常用操作整理</a>
       <ul>
-        <li><a href="#1-git常用方法">1 Git常用方法</a>
+        <li><a href="#11-仓库推送的标准流程">1.1 仓库推送的标准流程</a>
           <ul>
-            <li><a href="#11-仓库推送方法">1.1 仓库推送方法</a></li>
-            <li><a href="#12-git-tag的用法">1.2 git tag的用法</a></li>
-            <li><a href="#13-git撤销相关">1.3 git撤销相关</a></li>
-            <li><a href="#14-git-merge-合并相关">1.4 git merge 合并相关</a></li>
-            <li><a href="#15-git合并代码">1.5 git合并代码</a></li>
+            <li><a href="#步骤说明">步骤说明</a></li>
           </ul>
         </li>
-        <li><a href="#1-git常用方法-1">1 Git常用方法</a>
-          <ul>
-            <li><a href="#21-npm-i-出现node-sass报错">2.1 npm i 出现node-sass报错</a></li>
-          </ul>
-        </li>
+        <li><a href="#12-git-tag-的使用场景与命令">1.2 Git Tag 的使用场景与命令</a></li>
+        <li><a href="#13-git-撤销相关操作">1.3 Git 撤销相关操作</a></li>
+        <li><a href="#14-git-merge-合并流程">1.4 Git Merge 合并流程</a></li>
+        <li><a href="#15-merge-与-rebase-的区别">1.5 Merge 与 Rebase 的区别</a></li>
+        <li><a href="#二开发环境与框架问题记录">二、开发环境与框架问题记录</a></li>
+        <li><a href="#21-npm-i-时-node-sass-安装失败">2.1 npm i 时 node-sass 安装失败</a></li>
+        <li><a href="#22-单页面-html-中-vue2-具名插槽失效问题">2.2 单页面 HTML 中 Vue2 具名插槽失效问题</a></li>
       </ul>
     </li>
   </ul>
@@ -701,14 +697,14 @@
 
 
         <div class="article-content max-w-prose mb-20">
-          <p><h2 id="typeit-f8b1a2324c12a60478504555cc1614e5"></h2>
+          <h2 id="typeit-f8b1a2324c12a60478504555cc1614e5"></h2>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
       new TypeIt("#typeit-f8b1a2324c12a60478504555cc1614e5", {
         strings: ["","记录我开发过程中遇到的问题。",""],
         speed:  100 ,
-        lifeLike:  true ,
+        lifeLike: "true",
         startDelay:  0 ,
         breakLines:  true ,
         waitUntilVisible:  true ,
@@ -725,219 +721,393 @@
         />
   
   
-  </figure></p>
+  </figure>
 
 
-<h3 class="relative group">1 Git常用方法 
-    <div id="1-git%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95" class="anchor"></div>
+<h2 class="relative group">一、Git 常用操作整理 
+    <div id="%E4%B8%80git-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#1-git%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%B8%80git-%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E6%95%B4%E7%90%86" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+
+<h3 class="relative group">1.1 仓库推送的标准流程 
+    <div id="11-%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#11-%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E7%9A%84%E6%A0%87%E5%87%86%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<blockquote>
+<p>场景：
+本地有未提交修改，但需要先拉取远端代码，避免直接 <code>pull</code> 产生冲突。</p>
+</blockquote>
 
 
-<h4 class="relative group">1.1 仓库推送方法 
-    <div id="11-%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E6%96%B9%E6%B3%95" class="anchor"></div>
+<h4 class="relative group">步骤说明 
+    <div id="%E6%AD%A5%E9%AA%A4%E8%AF%B4%E6%98%8E" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#11-%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E6%96%B9%E6%B3%95" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E6%AD%A5%E9%AA%A4%E8%AF%B4%E6%98%8E" aria-label="Anchor">#</a>
     </span>        
     
 </h4>
-<ol>
-<li>将本地开发的记录在vscode的git管理工具中暂存</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
-</span></span></code></pre></div><ol start="2">
-<li>将修改的内容暂存后继续<strong>存储暂存</strong>，可以不设置暂存的名称，如有多个暂存可以设置</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">stash</span>
-</span></span></code></pre></div><ol start="3">
-<li>接下来就开始拉取远端的仓库代码，暂存代码就是为了避免本地和远端的代码不一致造成冲突</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">pull</span>  <span class="c1">//拉取远端仓库代码
-</span></span></span></code></pre></div><ol start="4">
-<li>将暂存的代码弹出</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">stash</span> <span class="nx">pop</span>
-</span></span></code></pre></div><ol start="5">
-<li>
-<p>弹出代码后，如果有冲突的地方，就根据情况选择传入的修改（暂存的）和原本的代码（仓库的），修改完成后保存代码</p>
+<p>1️⃣ <strong>将当前修改加入暂存区</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span></code></pre></div><p>2️⃣ 将暂存区内容存入 stash（可选命名）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git stash
+</span></span></code></pre></div><blockquote>
+<p>stash 的作用：
+👉 临时保存本地修改，确保工作区干净，避免与远端代码冲突。</p>
+</blockquote>
+<p>3️⃣ 拉取远端最新代码</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull  //拉取远端仓库代码
+</span></span></code></pre></div><p>4️⃣ 恢复之前暂存的修改</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git stash pop
+</span></span></code></pre></div><p>5️⃣ 如出现冲突</p>
+<ul>
+<li>根据实际情况选择：
+<ul>
+<li>本地修改（stash）</li>
+<li>远端代码（repository）</li>
+</ul>
 </li>
-<li>
-<p>暂存代码并本地提交，推送到仓库</p>
-</li>
-</ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">add</span> <span class="p">.</span>
-</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">commit</span> <span class="o">-</span><span class="nx">m</span> <span class="s1">&#39;提交内容的描述文字&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">push</span>
+<li>手动解决冲突并保存</li>
+</ul>
+<p>6️⃣ 提交并推送</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s1">&#39;提交内容的描述文字&#39;</span>
+</span></span><span class="line"><span class="cl">git push
 </span></span></code></pre></div>
 
-<h4 class="relative group">1.2 git tag的用法 
-    <div id="12-git-tag%E7%9A%84%E7%94%A8%E6%B3%95" class="anchor"></div>
+<h3 class="relative group">1.2 Git Tag 的使用场景与命令 
+    <div id="12-git-tag-%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E5%91%BD%E4%BB%A4" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#12-git-tag%E7%9A%84%E7%94%A8%E6%B3%95" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#12-git-tag-%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%B8%8E%E5%91%BD%E4%BB%A4" aria-label="Anchor">#</a>
     </span>        
     
-</h4>
-<p><strong>git tag 作用</strong></p>
-<p>tag是一个记录点，用于记录某个commit点或分支的历史快照，这样方便查找版本号，相比commit id 更加人性化，直接可以通过v1或v2查找对应发布版本的源码。</p>
+</h3>
+<p><strong>Tag 的作用</strong></p>
+<p><code>tag</code>是某个 <strong>commit 的标记点</strong>，常用于：</p>
+<ul>
+<li>标识发布版本（如 <code>v1.0.0</code>）</li>
+<li>快速回溯历史版本</li>
+<li>比 commit hash 更直观、可读性更高</li>
+</ul>
+<p><strong>常用命令</strong></p>
 <ul>
 <li>创建轻量标签</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">tag</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">3</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag 1.2.3
 </span></span></code></pre></div><ul>
-<li>注释创建的标签</li>
+<li>创建带注释的标签（推荐）</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">tag</span> <span class="o">-</span><span class="nx">a</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">3</span> <span class="o">-</span><span class="nx">m</span> <span class="s2">&#34;标签的描述信息&#34;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag -a 1.2.3 -m <span class="s2">&#34;标签的描述信息&#34;</span>
 </span></span></code></pre></div><ul>
-<li>查看1.2.3版本的具体信息</li>
+<li>查看标签对应的提交信息</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">show</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">3</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git show 1.2.3
 </span></span></code></pre></div><ul>
-<li>将标签推送到远程</li>
+<li>推送单个标签到远程</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">push</span> <span class="nx">origin</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">3</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push origin 1.2.3
 </span></span></code></pre></div><ul>
-<li>一次性推送多个标签到远程</li>
+<li>一次性推送所有本地标签</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">push</span> <span class="nx">origin</span> <span class="o">--</span><span class="nx">tags</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git push origin --tags
 </span></span></code></pre></div><ul>
 <li>删除本地标签</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">tag</span> <span class="o">-</span><span class="nx">d</span> <span class="mf">1.2</span><span class="p">.</span><span class="mi">4</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git tag -d 1.2.4
 </span></span></code></pre></div><ul>
 <li>删除远程标签</li>
 </ul>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">push</span> <span class="nx">origin</span> <span class="o">:</span><span class="nx">refs</span><span class="o">/</span><span class="nx">tags</span><span class="o">/</span><span class="mf">1.2</span><span class="p">.</span><span class="mi">3</span>
 </span></span></code></pre></div>
 
-<h4 class="relative group">1.3 git撤销相关 
-    <div id="13-git%E6%92%A4%E9%94%80%E7%9B%B8%E5%85%B3" class="anchor"></div>
+<h3 class="relative group">1.3 Git 撤销相关操作 
+    <div id="13-git-%E6%92%A4%E9%94%80%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#13-git%E6%92%A4%E9%94%80%E7%9B%B8%E5%85%B3" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#13-git-%E6%92%A4%E9%94%80%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C" aria-label="Anchor">#</a>
     </span>        
     
-</h4>
+</h3>
 <ul>
-<li>撤销最近一次的commit操作并保留修改记录（soft）</li>
+<li>撤销最近一次 commit，但保留代码修改（soft 模式）</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">reset</span> <span class="o">--</span><span class="nx">soft</span> <span class="nx">HEAD</span><span class="o">^</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git reset --soft HEAD^
+</span></span></code></pre></div><blockquote>
+<p>适用于：</p>
+<p>提交说明写错 / 提交过早，但代码本身是正确的。</p>
+</blockquote>
+
+
+<h3 class="relative group">1.4 Git Merge 合并流程 
+    <div id="14-git-merge-%E5%90%88%E5%B9%B6%E6%B5%81%E7%A8%8B" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#14-git-merge-%E5%90%88%E5%B9%B6%E6%B5%81%E7%A8%8B" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<blockquote>
+<p>将功能分支合并到目标分支（如 <code>dev</code>）
+1️⃣ 切换到目标分支（确保无未提交代码）</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git checkout dev
+</span></span></code></pre></div><p>2️⃣ 拉取最新代码（非常关键）</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git pull
+</span></span></code></pre></div><p>3️⃣ 合并功能分支</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git merge feat_20240603
+</span></span></code></pre></div><p>4️⃣ 解决冲突（如有）
+5️⃣ 提交并推送</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s1">&#39;合并 feat_20240603 分支&#39;</span>
+</span></span><span class="line"><span class="cl">git push
 </span></span></code></pre></div>
 
-<h4 class="relative group">1.4 git merge 合并相关 
-    <div id="14-git-merge-%E5%90%88%E5%B9%B6%E7%9B%B8%E5%85%B3" class="anchor"></div>
+<h3 class="relative group">1.5 Merge 与 Rebase 的区别 
+    <div id="15-merge-%E4%B8%8E-rebase-%E7%9A%84%E5%8C%BA%E5%88%AB" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#14-git-merge-%E5%90%88%E5%B9%B6%E7%9B%B8%E5%85%B3" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#15-merge-%E4%B8%8E-rebase-%E7%9A%84%E5%8C%BA%E5%88%AB" aria-label="Anchor">#</a>
     </span>        
     
-</h4>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git config pull.rebase <span class="nb">false</span> <span class="c1">#merge</span>
+</span></span><span class="line"><span class="cl">git config pull.rebase <span class="nb">true</span> <span class="c1">#rebase</span>
+</span></span></code></pre></div><p><strong>Merge（合并）</strong></p>
 <ul>
-<li>先切换到需要合并到发分支（确保没有未提交的代码）</li>
+<li>创建一个新的合并提交</li>
+<li>保留完整的分支历史</li>
+<li>历史结构呈树状</li>
 </ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">checkout</span> <span class="nx">dev</span>
-</span></span></code></pre></div><ul>
-<li>拉取该分支最新代码（一定确保pull成功）</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">pull</span>
-</span></span></code></pre></div><ul>
-<li>合并源分支</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">merge</span> <span class="nx">feat_20240603</span>
-</span></span></code></pre></div><ul>
-<li>
-<p>处理合并过来的冲突代码</p>
-</li>
-<li>
-<p>提交代码（commit + push）</p>
-</li>
-</ul>
-
-
-<h4 class="relative group">1.5 git合并代码 
-    <div id="15-git%E5%90%88%E5%B9%B6%E4%BB%A3%E7%A0%81" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#15-git%E5%90%88%E5%B9%B6%E4%BB%A3%E7%A0%81" aria-label="Anchor">#</a>
-    </span>        
-    
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">conifg</span> <span class="nx">pull</span><span class="p">.</span><span class="nx">rebase</span> <span class="kc">false</span> <span class="err">#</span><span class="nx">merge</span>
-</span></span><span class="line"><span class="cl"><span class="nx">git</span> <span class="nx">conifg</span> <span class="nx">pull</span><span class="p">.</span><span class="nx">rebase</span> <span class="kc">true</span> <span class="err">#</span><span class="nx">rebase</span>
-</span></span></code></pre></div><ul>
-<li>
-<p><strong>Merge（合并）</strong></p>
-<p>将两个分支的历史合并在一起，创建一个新的合并提交，保留了各自分支的提交历史。这会产生一个合并的提交节点，显示了两个分支的合并点。</p>
-</li>
-<li>
+<p>✔️ 优点：安全、直观、不篡改历史</p>
+<p>✔️ 适合：团队协作、大多数业务项目</p>
 <p><strong>Rebase（变基）</strong></p>
-<p>将当前分支的提交“移动”到另一个分支的最新提交之后，使得提交历史更加线性清晰。在变基过程中，会将当前分支的提交逐个应用到目标分支的最新提交上，不会产生合并提交。</p>
-</li>
+<ul>
+<li>将当前分支的提交“平移”到目标分支之后</li>
+<li>提交历史更加线性</li>
 </ul>
-<p>总结：选择使用合并（Merge）的主要原因是合并是一种相对保守和安全的合并方式，不会改变提交历史，保留了分支的完整历史记录。此外，合并操作相对简单，易于理解和操作，适合大多数团队协作开发的需求。</p>
+<blockquote>
+<p>⚠️ 注意：</p>
+<p>Rebase 会修改提交历史，不适合已推送到公共仓库的分支。</p>
+</blockquote>
 
 
-<h3 class="relative group">1 Git常用方法 
-    <div id="1-git%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-1" class="anchor"></div>
+<h3 class="relative group">二、开发环境与框架问题记录 
+    <div id="%E4%BA%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E6%A1%86%E6%9E%B6%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#1-git%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95-1" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#%E4%BA%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8E%E6%A1%86%E6%9E%B6%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
 
 
-<h4 class="relative group">2.1 npm i 出现node-sass报错 
-    <div id="21-npm-i-%E5%87%BA%E7%8E%B0node-sass%E6%8A%A5%E9%94%99" class="anchor"></div>
+<h3 class="relative group">2.1 npm i 时 node-sass 安装失败 
+    <div id="21-npm-i-%E6%97%B6-node-sass-%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#21-npm-i-%E5%87%BA%E7%8E%B0node-sass%E6%8A%A5%E9%94%99" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#21-npm-i-%E6%97%B6-node-sass-%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5" aria-label="Anchor">#</a>
     </span>        
     
-</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">ERR</span><span class="o">!</span> <span class="nx">errno</span> <span class="mi">1</span>
+</h3>
+<p><strong>报错信息示例</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm ERR! errno <span class="m">1</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nx">npm</span> <span class="nx">ERR</span><span class="o">!</span> <span class="nx">node</span><span class="o">-</span><span class="nx">sassa4</span><span class="p">.</span><span class="mf">14.1</span> <span class="nx">postinstall</span><span class="o">:</span><span class="sb">`node scripts/build.js
-</span></span></span><span class="line"><span class="cl"><span class="sb">
-</span></span></span><span class="line"><span class="cl"><span class="sb">npm ERR! Exit status 1
-</span></span></span><span class="line"><span class="cl"><span class="sb">
-</span></span></span><span class="line"><span class="cl"><span class="sb">npm ERR! Failed at the node-sass@4.14 1 postinstall script.
-</span></span></span><span class="line"><span class="cl"><span class="sb">npm ERR! This is probably not a problem with npm. There is likely additional logging output a
-</span></span></span><span class="line"><span class="cl"><span class="sb">
-</span></span></span><span class="line"><span class="cl"><span class="sb">npm ERR! A complete log of this run can be found in:
-</span></span></span><span class="line"><span class="cl"><span class="sb">npm ERR! /Users/misty/.npm/ logs/2025-05-12T08 49_54 463Z-debug.log
-</span></span></span></code></pre></div><p>解决思路：</p>
-<ol>
-<li>
-<p>一般情况是node-sass版本的问题，检查项目的<strong>package.json</strong>和<strong>package-lock.json</strong>中node-sass版本是否一致，可能前者版本低于后者版本导致的。我们以lock版本为准，修改package.json中的版本号，与lock中的保持一致，再次npm install，大概率可以解决问题。</p>
-<p><em><u>PS：package.json中有^符号应该是向上取版本号的，但是在这里居然失效了</u></em></p>
-<p><u>环境：MacBook Air M1 macOS15.5 </u></p>
+</span></span><span class="line"><span class="cl">npm ERR! node-sassa4.14.1 postinstall:<span class="sb">`</span>node scripts/build.js
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">npm ERR! Exit status <span class="m">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">npm ERR! Failed at the node-sass@4.14 <span class="m">1</span> postinstall script.
+</span></span><span class="line"><span class="cl">npm ERR! This is probably not a problem with npm. There is likely
+</span></span><span class="line"><span class="cl">additional logging output a
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">npm ERR! A <span class="nb">complete</span> log of this run can be found in:
+</span></span><span class="line"><span class="cl">npm ERR! /Users/misty/.npm/ logs/2025-05-12T08 49_54 463Z-debug.log
+</span></span></code></pre></div><p><strong>解决思路：</strong></p>
+<p><strong>方案一：版本不一致（最常见）</strong></p>
+<ul>
+<li>检查：
+<ul>
+<li><code>package.json</code></li>
+<li><code>package-lock.json</code></li>
+</ul>
 </li>
-<li>
-<p>另外的情况是环境配置的问题，node-sass插件依赖python的环境，所以可以尝试给电脑安装python来验证是否可以解决。</p>
+<li>确保 <strong>node-sass 版本一致</strong></li>
+<li>以<code>package-lock.json</code>为准，手动同步版本号后重新安装</li>
+</ul>
+<blockquote>
+<p>⚠️ 备注
+即使 package.json 中使用了<code>^</code>，</p>
+<p>在 node-sass 场景下也 可能不会自动向上兼容</p>
+</blockquote>
+<p><strong>方案二：环境依赖问题</strong></p>
+<ul>
+<li><code>node-sass</code>依赖<code>python</code></li>
+<li>可尝试安装或配置本地 python 环境</li>
+</ul>
+<blockquote>
+<p>测试环境</p>
+<p>设备：MacBook Air M1 macOS15.5</p>
+<p>软件：Node.js 14.21.3</p>
+</blockquote>
+
+
+<h3 class="relative group">2.2 单页面 HTML 中 Vue2 具名插槽失效问题 
+    <div id="22-%E5%8D%95%E9%A1%B5%E9%9D%A2-html-%E4%B8%AD-vue2-%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#22-%E5%8D%95%E9%A1%B5%E9%9D%A2-html-%E4%B8%AD-vue2-%E5%85%B7%E5%90%8D%E6%8F%92%E6%A7%BD%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><strong>问题背景</strong></p>
+<ul>
+<li>使用 纯 HTML（in-DOM template）</li>
+<li>多层 Vue2 组件封装</li>
+<li>使用具名插槽进行表格列自定义渲染</li>
+<li>插槽内容 无法显示</li>
+</ul>
+<p><strong>父组件代码（插槽透传）</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;$scopedSlots.action&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;ew-paging-table__action&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">slot</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;action&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;!$scopedSlots.table&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">EwTable</span>
+</span></span><span class="line"><span class="cl">      <span class="na">ref</span><span class="o">=</span><span class="s">&#34;pagingTable&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">v-bind</span><span class="o">=</span><span class="s">&#34;$attrs&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">v-on</span><span class="o">=</span><span class="s">&#34;$listeners&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:page-current</span><span class="o">=</span><span class="s">&#34;pageOption.current&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:page-size</span><span class="o">=</span><span class="s">&#34;pageOption.size&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">template</span>
+</span></span><span class="line"><span class="cl">        <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;(_, name) in $scopedSlots&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="na">v-slot:</span><span class="err">[</span><span class="na">name</span><span class="err">]=&#34;</span><span class="na">slotProps</span><span class="err">&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">slot</span>
+</span></span><span class="line"><span class="cl">          <span class="na">v-if</span><span class="o">=</span><span class="s">&#34;name !== &#39;default&#39;&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">:name</span><span class="o">=</span><span class="s">&#34;name&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="na">v-bind</span><span class="o">=</span><span class="s">&#34;slotProps&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">EwTable</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">slot</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;table&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>子组件（问题代码）</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">EwTable</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">template</span> <span class="na">slot-scope</span><span class="o">=</span><span class="s">&#34;scope&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">slot</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:name</span><span class="o">=</span><span class="s">&#34;&#39;col.&#39; + item.prop&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:index</span><span class="o">=</span><span class="s">&#34;scope.$index&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:row</span><span class="o">=</span><span class="s">&#34;scope.row&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ formatColumn(scope) }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">EwTable</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>父组件使用示例（❌ 失效）</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">template</span> <span class="err">#</span><span class="na">col</span><span class="err">.</span><span class="na">orgName</span><span class="o">=</span><span class="s">&#34;{ row }&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ row.orgName }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>❗ 问题本质（重点）</strong>
+当前环境是：</p>
+<blockquote>
+<p>纯 HTML 页面（in-DOM template） + Vue 2</p>
+</blockquote>
+<p>在这种情况下：</p>
+<ul>
+<li>❌ 不支持 <code>#col.xxx</code></li>
+<li>❌ 不支持 <code>v-slot:col.xxx</code></li>
+<li>❌<code>.</code>会被当作<strong>修饰符</strong></li>
+</ul>
+<p>HTML 解析结果相当于：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">slot = &#34;col&#34;
+</span></span><span class="line"><span class="cl">modifier = &#34;orgName&#34;
+</span></span></code></pre></div><p><strong>👉 Vue 根本无法识别该插槽</strong></p>
+<p>✅ 解决方案：避免使用<code>.</code>作为插槽名
+修改插槽命名规则</p>
+<ul>
+<li>❌ <code>col.xxx</code></li>
+<li>✅ <code>col-xxx</code></li>
+</ul>
+<p><strong>修改后的子组件代码</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">el-table-column</span>
+</span></span><span class="line"><span class="cl">  <span class="na">v-for</span><span class="o">=</span><span class="s">&#34;(item, index) in columns&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">:key</span><span class="o">=</span><span class="s">&#34;index&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">:prop</span><span class="o">=</span><span class="s">&#34;item.prop&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">:label</span><span class="o">=</span><span class="s">&#34;item.label&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">template</span> <span class="na">slot-scope</span><span class="o">=</span><span class="s">&#34;scope&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">slot</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:name</span><span class="o">=</span><span class="s">&#34;&#39;col-&#39; + item.prop&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:index</span><span class="o">=</span><span class="s">&#34;scope.$index&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="na">:row</span><span class="o">=</span><span class="s">&#34;scope.row&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      {{ formatColumn(scope) }}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">el-table-column</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>使用方式（✅ 生效）</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">template</span> <span class="na">slot</span><span class="o">=</span><span class="s">&#34;col-orgName&#34;</span> <span class="na">slot-scope</span><span class="o">=</span><span class="s">&#34;{ row }&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ row.orgName }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">EwPagingTable</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p><strong>📌 总结</strong></p>
+<ul>
+<li>in-DOM template 下
+<ul>
+<li>插槽名不能包含<code>.</code></li>
+</ul>
 </li>
-</ol>
+<li>推荐统一规范：
+<ul>
+<li><code>col-字段名</code></li>
+</ul>
+</li>
+<li>适用于：
+<ul>
+<li>单 HTML 页面</li>
+<li>Vue2 组件封装</li>
+<li>ElementUI 表格封装</li>
+</ul>
+</li>
+</ul>
 
         </div>
         

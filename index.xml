@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Misty</copyright>
-    <lastBuildDate>Wed, 03 Dec 2025 18:04:42 +0800</lastBuildDate><atom:link href="https://mistychan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 16 Dec 2025 17:19:25 +0800</lastBuildDate><atom:link href="https://mistychan.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>读《被讨厌的勇气》</title>
+      <link>https://mistychan.github.io/books/courage/</link>
+      <pubDate>Tue, 16 Dec 2025 17:19:25 +0800</pubDate>
+      
+      <guid>https://mistychan.github.io/books/courage/</guid>
+      <description>一些读书笔记 # 总是后悔自己的选择 # 原文</description>
+      
+    </item>
+    
     <item>
       <title>HugoCommit</title>
       <link>https://mistychan.github.io/blog/hugocommit/</link>
@@ -44,7 +54,7 @@
       <pubDate>Thu, 28 Aug 2025 15:36:12 +0800</pubDate>
       
       <guid>https://mistychan.github.io/blog/firstblog/</guid>
-      <description>1 Git常用方法 # 1.</description>
+      <description>一、Git 常用操作整理 # 1.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://mistychan.github.io/blog/firstblog/featured.png" />
     </item>
     
